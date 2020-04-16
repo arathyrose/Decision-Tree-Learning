@@ -22,17 +22,17 @@ Predicting the outcome of a RoboCup Soccer game after first few minutes of play,
 
 Here the aim is to learn a function that will tell us if a team will:
 
-- Win Big: > 5 goals difference with the opponent 
-- Win: 1-5 goal difference 
-- Tie: No goal difference 
-- Lose: Opponent outscores by 1 to 5 goals 
+- Win Big: > 5 goals difference with the opponent
+- Win: 1-5 goal difference
+- Tie: No goal difference
+- Lose: Opponent outscores by 1 to 5 goals
 - Lose big: Opponent outscores by more than 5 goals
 
 ### Relevant Attributes
 
-- Possession time: What percent of time ball with team? 
-- % time ball in opponent half – Placement of opponent’s defenders 
-- Opponent playing along sidelines or the center 
+- Possession time: What percent of time ball with team?
+- % time ball in opponent half – Placement of opponent’s defenders
+- Opponent playing along sidelines or the center
 - One-on-one with opposition with opposition goal keeper
 
 ### Example decision tree
