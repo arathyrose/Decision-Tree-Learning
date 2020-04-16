@@ -44,18 +44,21 @@ You will need to submit a zip of folder(RollNumber) containing two files:
 ### 1. A file(Rollnumber.txt)
 
 1. Database Number(1-10)
-2. Put conditions for every path to leaf node separated by ’and’.  Use′strexample′forstrings[quotes].  Use == to check equality, comparison operators(<,>,≤,≥) remain the same.  Fields need to be mentioned as f[0],f[1],f[2],..., based on their position in table.  At the end, separated by acomma, put the expected label(don’t need quotes here).  
+2. Put conditions for every path to leaf node separated by ’and’.  Use′strexample′for strings[quotes].  Use == to check equality, comparison operators(<,>,≤,≥) remain the same.  Fields need to be mentioned as f[0],f[1],f[2],..., based on their position in table.  At the end, separated by acomma, put the expected label(don’t need quotes here).  
 
 For example :f[0]<10 and f[1]==’Sunny’,Yes.
 
 Example script for above tree:
 
-- f[2]<5 and f[0]==’Rndm’ andf[1]<= 1, False
-- f[2]<5 and f[0]==’Rndm’ andf[1]>1, True
-- f[2]<5 and f[0]!=’Rndm’ andf[1]>2, True
-- f[2]<5 and f[0]!=’Rndm’ andf[1]<= 2, False
-- f[2]>= 5 andf[1] == 2, True
-- f[2]>= 5 andf[1]! = 2, False
+```less
+2
+f[2]<5 and f[0]==’Rndm’ andf[1]<= 1, False
+f[2]<5 and f[0]==’Rndm’ andf[1]>1, True
+f[2]<5 and f[0]!=’Rndm’ andf[1]>2, True
+f[2]<5 and f[0]!=’Rndm’ andf[1]<= 2, False
+f[2]>= 5 andf[1] == 2, True
+f[2]>= 5 andf[1]! = 2, False
+```
 
 ### 2. A brief report explaining how you reached your solution[step-wise decisions and entropy at each step].(RollNumber.pdf)
 

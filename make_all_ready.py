@@ -1,9 +1,18 @@
+'''
+Extract information from the dataset in csv format
+Change dataset.csv to contain your dataset
+Change roll_no to your roll number
+The output would be saved to given.txt
+'''
+
 import pandas as pd
 import json
 
+# Enter roll number here
+roll_no = 2018101042
 
 # Read contents of file
-data = pd.read_csv("dataset_SK.csv")
+data = pd.read_csv("dataset.csv")
 
 # Make it to our format
 data = data.to_dict()
@@ -20,24 +29,28 @@ for i in range(data_size):
 data = main_array
 
 # Make swaps based on the roll_no
-roll_no = 2018101042
 second_last_digit = int((roll_no % 100)/10)
 last_digit = roll_no % 10
 
-flip1 = (last_digit+second_last_digit) % data_size+1
-flip2 = (second_last_digit) % data_size+1
+flip1 = (last_digit+second_last_digit) % data_size+1-1
+flip2 = (second_last_digit) % data_size+1-1
 
 if(flip1 == flip2):
-    flip1 = (second_last_digit) % data_size+1
-    flip2 = (second_last_digit+1) % data_size+1
+    flip1 = (second_last_digit) % data_size+1-1
+    flip2 = (second_last_digit+1) % data_size+1-1
+
+print(flip1, flip2)
+print(data[flip1], data[flip2])
 
 t = data[flip1][3]
 data[flip1][3] = data[flip2][3]
 data[flip2][3] = t
 
+print(data[flip1], data[flip2])
+
 # now data is ready
 print("FINAL DATA: ", data)
 
 # save this data to a file
-with open("out1.txt", "w") as f:
-    json.dump(f, data)
+with open("given.txt", "w") as f:
+    json.dump(data, f)
